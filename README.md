@@ -1,6 +1,7 @@
 ## GoodEnergy
 
 Input Data:
+```bash
 {
   "postal_code": 76648,
   "city": "Lenyascheid",
@@ -8,32 +9,35 @@ Input Data:
   "house_number": "44-56",
   "yearly_kwh_consumption": 1000
 }
+```
 
 Expected Response Data:
+```bash
 {
     "grid_fees": 1.81,
     "kwh_price": 0.5,
     "total_price": 503.69,
     "unit_price": 1.88
 }
+```
 
-• The project must have an API.
-• The implementation must respect all the rules.
-• The project must be protected against errors.
-• The project must have tests.
-• The project must be uploaded to a Bitbucket/Gitlab/Github account with free access.
-• The project must have a README file explaining the setup and all the logic/tech stack decisions behind it.
+• The project must have an API. <br />
+• The implementation must respect all the rules. <br />
+• The project must be protected against errors. <br />
+• The project must have tests. <br />
+• The project must be uploaded to a Bitbucket/Gitlab/Github account with free access. <br />
+• The project must have a README file explaining the setup and all the logic/tech stack decisions behind it. <br />
 
 ## Design Pattern
 *** 
 APIs created using Flask, sqllite, FlaskREST, flask_sqlalchemy
-Databse query is acheived using Flask ORM. 
+Database query is acheived using Flask ORM. 
 
 APIs:
 
 Load the CSV data to Location database
 1. http://127.0.0.1:8000 > POST
-Make sure to pass key as file and .csv 
+Make sure to pass key as file and .csv <br />
 NOTE: Data load may take time as it has huge amount of data
 
 INPUT : 
@@ -42,7 +46,7 @@ file: <file.csv>
 2. http://127.0.0.1:8000/userdata > POST
 
 INPUT :  
-
+```bash
 {
   "postal_code": 76648,
   "city": "Lenyascheid",
@@ -50,16 +54,16 @@ INPUT :
   "house_number": "44-56",
   "yearly_kwh_consumption": 1000
 }
-
+```
 RESPONSE: 
-
+```bash
 {
     "grid_fees": 1.81,
     "kwh_price": 0.5,
     "total_price": 503.69,
     "unit_price": 1.88
 }
-
+```
 ***
 
 ###### Setup the app ######
