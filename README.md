@@ -30,20 +30,20 @@ Expected Response Data:
 
 ## Design Pattern
 *** 
-APIs created using Flask, sqllite, FlaskREST, flask_sqlalchemy
+APIs created using Flask, sqlite, FlaskREST, flask_sqlalchemy
 Database query is acheived using Flask ORM. 
 
 APIs:
 
 Load the CSV data to Location database
-1. http://127.0.0.1:8000 > POST
+1. http://0.0.0.0:8000/upload > POST
 Make sure to pass key as file and .csv <br />
 NOTE: Data load may take time as it has huge amount of data
 
 INPUT : 
 file: <file.csv>
 
-2. http://127.0.0.1:8000/userdata > POST
+2. http://0.0.0.0:8080/userdata?postal_code=postal_code&city=city&street=Torstraße&house_number=house_number&yearly_kwh_consumption=yearly_kwh_consumption > GET
 
 INPUT :  
 ```bash
@@ -66,19 +66,10 @@ RESPONSE:
 ```
 ***
 
-###### Setup the app ######
+###### Start the app ######
 
 ```bash
-git clone 
-cd <root-folder>
-sh setup.sh
-sh.start_app.sh
+docker-compose up --detach
 ```
 
 
-###### Unitest ######
-
-```bash
-cd test
-python test_api.py
-```
